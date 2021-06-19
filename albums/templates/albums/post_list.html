@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
+    <link rel="stylesheet" href="{% static 'css/albums.css' %}">
     <title>Albums</title>
 </head>
 <header>
-    <h1><a href="/">My Favorite Albums</a></h1>
+    <h1><a href="/">My Music Collection</a></h1>
 </header>
 
 {% for album in albums %}
