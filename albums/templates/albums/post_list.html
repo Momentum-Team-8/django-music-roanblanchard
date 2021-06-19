@@ -1,17 +1,12 @@
-{% load static %}
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="{% static 'css/albums.css' %}">
-    <title>Albums</title>
-</head>
-<header>
-    <h1><a href="/">My Music Collection</a></h1>
-</header>
 
-{% for album in albums %}
-    <article>
-        <!-- <time>published: {{ album.published_date }}</time> -->
-        <h2><a href="">{{ album.title }}</a></h2>
-        <p>{{ album.artist|linebreaksbr }}</p>
-    </article>
-{% endfor %}
+{% extends 'albums/base.html' %}
+
+{% block content %}
+    {% for album in albums %}
+        <article>
+            <!-- <time>published: {{ album.published_date }}</time> -->
+            <h2><a href="">{{ album.title }}</a></h2>
+            <p>{{ album.artist|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}
