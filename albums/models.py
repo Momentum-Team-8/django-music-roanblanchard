@@ -8,6 +8,3 @@ class Album(models.Model):
     artist = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
 
-    # def __str__(self):
-    #     return self.title + self.artist
-    
