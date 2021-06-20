@@ -33,7 +33,7 @@ def album_edit(request, pk):
             album = form.save(commit=False)
             album.created_date = timezone.now()
             album.save()
-            return redirect('post_detail', pk=album.pk)
+            return redirect('album_detail', pk=album.pk)
     else:
         form = AlbumForm(instance=album)
     return render(request, 'albums/post_edit.html', {'form': form})
