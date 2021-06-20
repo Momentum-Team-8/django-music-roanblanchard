@@ -10,4 +10,5 @@
         <h2>{{ album.title }}</h2>
         <p>{{ album.artist|linebreaksbr }}</p>
     </article>
+    <a class="red" href="{% url 'album_delete' pk=album.pk %}" method="POST">Delete</a>
 {% endblock %}

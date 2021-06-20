@@ -2,6 +2,8 @@
 {% extends 'albums/base.html' %}
 
 {% block content %}
+<a href="{% url 'album_new' %}" class="top-menu">
+    {% include './icons/file-earmark-plus (1).svg' %}
     {% for album in albums %}
         <article>
             <!-- <time>published: {{ album.published_date }}</time> -->
