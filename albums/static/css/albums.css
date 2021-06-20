@@ -7,7 +7,7 @@
 body {
     font-family: Helvetica, sans-serif;
     line-height: 40px;
-    background-color: #fff5db;
+    background-color: white;
 }
 
 a {
@@ -20,7 +20,7 @@ h1 > a {
 
 h1 {
     margin-bottom: 40px;
-    background-color: white;
+    background-color: #fff5db;
     padding: 20px;
     margin-top: 0;
     margin-left: 0;

@@ -1,17 +1,23 @@
 {% load static %}
 <!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="{% static 'css/albums.css' %}">
-    <title>Albums</title>
-</head>
-<header>
-    <h1><a href="/">My Music Collection</a></h1>
-</header>
-
-{% for album in albums %}
-    <article>
-        <!-- <time>published: {{ album.published_date }}</time> -->
-        <h2><a href="">{{ album.title }}</a></h2>
-        <p>{{ album.artist|linebreaksbr }}</p>
-    </article>
-{% endfor %}
+<html>
+    <head>
+        <title>Albums</title>
+        <link rel="stylesheet" href="{% static 'css/albums.css' %}">
+    </head>
+    <body>
+        <header class="page-header">
+          <div class="container">
+              <h1><a href="/">My Music Collection</a></h1>
+          </div>
+        </header>
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
